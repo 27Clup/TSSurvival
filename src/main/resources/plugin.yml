@@ -1,0 +1,11 @@
+main: com.outlook.twentysevenclup.TSS
+name: TSS
+api-version: 1.18
+version: 0.1.0
+description: TS Survival plugin pack, Survival extensions plugin.
+author: Subaru_dev
+commands:
+  kabile:
+    description: Crew command.
+  alan:
+    description: Claim command.
