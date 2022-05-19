@@ -1,5 +1,6 @@
 package com.outlook.twentysevenclup.events;
 
+import com.outlook.twentysevenclup.clan.TSClan;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -22,10 +23,6 @@ public class TSCommandListener implements CommandExecutor {
         Bukkit.getPluginCommand(label).setExecutor(new TSCommandListener());
     }
 
-    public static void crewMenuFor(Player player) {
-
-    }
-
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (label.equalsIgnoreCase("kabile")) {
@@ -41,10 +38,10 @@ public class TSCommandListener implements CommandExecutor {
                 } else if (args[0].equalsIgnoreCase("lider")) {
 
                 } else {
-                    crewMenuFor((Player)sender);
+                    TSClan.gui((Player)sender);
                 }
             } else {
-                crewMenuFor((Player)sender);
+                TSClan.gui((Player)sender);
             }
             return true;
         } else if (label.equalsIgnoreCase("alan")) {
