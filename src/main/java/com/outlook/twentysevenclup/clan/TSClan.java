@@ -1,8 +1,13 @@
 package com.outlook.twentysevenclup.clan;
 
+import com.outlook.twentysevenclup.gui.TSInventory;
+import com.outlook.twentysevenclup.gui.TSInventoryListener;
 import com.outlook.twentysevenclup.player.TSPlayer;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -48,6 +53,37 @@ public class TSClan implements Listener {
 
     public static void invite(TSPlayer from, TSPlayer to) {
         to.receiveInvite(from);
+    }
+
+    public static TSInventory gui(Player player) {
+        TSInventory tsInventory = new TSInventory(player, 1, "&7Kabile Arayüzü", new TSInventoryListener() {
+            @Override
+            public void onClick(InventoryClickEvent e) {
+                // TODO: add stuff
+                if (e.getSlot() == 0) {
+
+                } else if (e.getSlot() == 1) {
+
+                } else if (e.getSlot() == 2) {
+
+                } else if (e.getSlot() == 3) {
+
+                } else if (e.getSlot() == 4) {
+
+                } else if (e.getSlot() == 5) {
+
+                }
+            }
+        });
+        tsInventory.setSlots(new int[] { 0, 1, 2, 3, 4, 5 }, new ItemStack[] {
+            new ItemStack(Material.PAPER),
+            new ItemStack(Material.PAPER),
+            new ItemStack(Material.PAPER),
+            new ItemStack(Material.PAPER),
+            new ItemStack(Material.PAPER),
+        });
+        tsInventory.open();
+        return tsInventory;
     }
 
 }

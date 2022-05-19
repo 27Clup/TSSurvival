@@ -43,6 +43,12 @@ public class TSInventory implements Listener {
         this.inventory.setItem(slot, itemStack);
     }
 
+    public void setSlots(int[] slots, ItemStack[] itemStacks) {
+        for (int i = 0; i < slots.length; i++) {
+            this.setSlot(slots[i], itemStacks[i]); // THIS PLACE DEPENDS ON THE DEVELOPER, BECAUSE IT HAS NO CHECK FOR THE NULL OBJECT WHICH CAN BE IN ITEMSTACKS DUE TO INDEX, THAT'S COMING FROM THE LENGTH OF SLOTS ARRAY
+        }
+    }
+
     public void open() {
         ((Player)this.inventory.getHolder()).openInventory(this.inventory);
     }

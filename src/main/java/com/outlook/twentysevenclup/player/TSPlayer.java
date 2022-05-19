@@ -3,6 +3,7 @@ package com.outlook.twentysevenclup.player;
 import com.outlook.twentysevenclup.TSS;
 import com.outlook.twentysevenclup.clan.TSClan;
 import com.outlook.twentysevenclup.data.TSData;
+import com.outlook.twentysevenclup.gui.TSInventory;
 import org.bukkit.entity.Player;
 
 import java.util.List;
@@ -10,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.UUID;
-
 public class TSPlayer {
 
     public static HashMap<UUID, TSPlayer> list = new LinkedHashMap<>();
