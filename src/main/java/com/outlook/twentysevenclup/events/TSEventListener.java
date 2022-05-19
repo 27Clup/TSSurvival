@@ -20,7 +20,7 @@ public class TSEventListener implements Listener {
         TSInventory tsInventory = new TSInventory(e.getPlayer(), 9, "", new TSInventoryListener() {
             @Override
             public void onClick(InventoryClickEvent e) {
-                Bukkit.broadcastMessage(String.format("Slot {0} on Join Menu", e.getSlot()));
+                Bukkit.broadcastMessage(String.format("Slot %d on Join Menu", e.getSlot()));
             }
         });
         tsInventory.setSlot(0, new ItemStack(Material.WOODEN_AXE));
